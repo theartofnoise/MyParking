@@ -1,0 +1,132 @@
+
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="#"><i class="fas fa-parking"></i>&nbsp;Parking</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navbarNav">
+                <button type="button mx-auto" data-toggle="modal" data-target="#addVehicleModal"class="btn btn-primary" id="signOut">SignOut</button>
+        </div>
+        </div>
+    </nav>
+
+    <main>
+    <section id="chartSection">
+    <div id="charts">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="col-md-6">
+                    <canvas id="myChart2"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <div class="row">
+        <div class="container">
+            <div class="col text-center py-2">   
+            <button type="button mx-auto" data-toggle="modal" data-target="#addVehicleModal"class="btn btn-primary">Add Vehicle</button>
+            <button type="button mx-auto" data-toggle="modal" data-target="#addParkingModal"class="btn btn-primary" id="addParking">Add Parking</button>
+            </div>
+        </div> 
+    </div>
+
+    <section id="data">
+        <div class="container">        
+        
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Plate</th>
+                            <th>State</th>
+                            <th>Location</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="populateTable">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" role="dialog" tabindex="-1" id="addVehicleModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title">REGISTER </h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <h2 class="modalTitle">Register Your Car: </h2>
+                <p class="text-center ">Input your car's data. </p>
+                <div class="col">
+                <input type="text" placeholder="License plate #" class=" modalInput" id="addPlate">
+                <input type="text" placeholder="State" class=" modalInput" id="addState">
+                </div>
+            </div>
+            <div class="modal-footer"><button class="btn btn-primary" type="button" id="registerVehicle">REGISTER </button></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" role="dialog" tabindex="-1" id="addParkingModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title">REGISTER </h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <h2 class="modalTitle">Register Your Car: </h2>
+                <p class="text-center ">Input your car's data. </p>
+                <div class="col">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownPlate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select Plate
+                    </button>
+                    <div class="dropdown-menu" id="plateOptions" aria-labelledby="dropdownPlate">
+                    </div>
+                </div>
+                <input id="state" type="text" placeholder="State" class=" modalInput">
+                <input id="location" type="text" placeholder="Location" class=" modalInput">
+                <input id="amount" type="text" placeholder="Amount" class=" modalInput">
+                <input id="date" type="date" placeholder="Date" class=" modalInput">
+                </div>
+            </div>
+            <div id="registerParking" class="modal-footer"><button class="btn btn-primary" type="button">REGISTER </button></div>
+            </div>
+        </div>
+    </div>
+
+
+    </main>
+
+        
+    <footer class="page-footer">
+        <div class="container">
+            <div class="links"><a href="#">About</a><a href="#">Contact Us</a><a href="#"></a></div>
+            <div class="social-icons"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-instagram-outline"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a></div>
+        </div>
+    </footer>
+
+  
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+
+    <script src="/js/index.js"></script>
+    <script src="/js/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="/js/parking.js"></script>
+
+    
+
