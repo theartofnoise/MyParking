@@ -190,7 +190,7 @@ function populateTable(){
     $("#populateTable").empty();
     response.forEach(vehicle => {
       var tr =
-        `<tr data-id="${vehicle.userId}" id="row-${vehicle.userId}"><th scope="row"><a href="example/${vehicle.userId}">${vehicle.plate}</a></th><td>${vehicle.state}</td><td>${vehicle.location}</td><td>${vehicle.amount}</td><td>${vehicle.date.split("T",1)}</td><td><a href="javascript:void(0)" class="btn btn-danger float-right delete" onclick="dropRow(${vehicle.userId})">ｘ</a></td></tr>`;
+        `<tr data-id="${vehicle.id}" id="row-${vehicle.id}"><th scope="row"><a href="example/${vehicle.id}">${vehicle.plate}</a></th><td>${vehicle.state}</td><td>${vehicle.location}</td><td>${vehicle.amount}</td><td>${vehicle.date.split("T",1)}</td><td><a href="javascript:void(0)" class="btn btn-danger float-right delete" onclick="dropRow(${vehicle.id})">ｘ</a></td></tr>`;
 
         $("#populateTable").append(tr);
       
